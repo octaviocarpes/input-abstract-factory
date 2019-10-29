@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { InputFactory } from './components/factory/inputFactory';
+
+const factory: InputFactory = new InputFactory();
 
 const App: React.FC = () => {
   return (
@@ -19,6 +22,10 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <div>
+        {factory.createNumberInput()}
+        {factory.createTextInput()}
+      </div>
     </div>
   );
 }
